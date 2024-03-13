@@ -150,9 +150,9 @@ def schema_table_search(event, context):
             matched_content = content
 
     if matched_content is not None:
-        repo.update_file(matched_content.path, "auto-update", str(vw), sha=matched_content.sha, branch="master")
+        repo.update_file(matched_content.path, "auto-update", str(vw), sha=matched_content.sha, branch="main")
     else:
-        repo.create_file(fName, "new file", str(vw), branch="master")
+        repo.create_file(fName, "new file", str(vw), branch="main")
 
     # hit deploy webhook
 
